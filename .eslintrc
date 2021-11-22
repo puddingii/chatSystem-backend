@@ -1,0 +1,57 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "plugins": [
+        "jsdoc",
+        "sort-class-members"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:jsdoc/recommended"
+    ],
+    "requireConfigFile": false,
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "modules": true
+        }
+    },
+    "globals": {
+        "globalThis": false,
+        "*": false
+    },
+    "rules": {
+        "semi": [
+            "error",
+            "always"
+        ],
+        "sort-class-members/sort-class-members": [
+            2,
+            {
+                "order": [
+                    "[static-properties]",
+                    "[static-methods]",
+                    "[properties]",
+                    "[conventional-private-properties]",
+                    "constructor",
+                    "[methods]",
+                    "[conventional-private-methods]"
+                ],
+                "accessorPairPositioning": "getThenSet"
+            }
+        ],
+        "keyword-spacing": 0,
+        "no-unused-vars": 1,
+        "space-before-function-paren": 0,
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "no-tabs": 0
+    }
+}
