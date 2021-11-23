@@ -6,13 +6,13 @@ const userController = express.Router();
 userController.post("/update", async (req, res) => {
     try {
         const { 
-            body: { loginId, nickname, avatar, isRemembered } 
+            body: { loginId, nickname, avatar } 
         } = req;
         const isExisted = await User.findOne({ where: { loginId }});
         if(isExisted) {
-            await User.update({ nickname, avatar, isRemembered }, { where: { loginId }})
+            await User.update({ nickname, avatar }, { where: { loginId }})
         } else {
-            await User.create({ loginId, nickname, avatar, isRemembered });
+            await User.create({ loginId, nickname, avatar });
         }
         return res.sendStatus(201);
     } catch(e) {
@@ -21,7 +21,7 @@ userController.post("/update", async (req, res) => {
     }
 });
 
-userController.get("/get", async (req, res) => {
+userController.post("/get", async (req, res) => {
     try {
         const { 
             body: { loginId } 

@@ -25,10 +25,6 @@ User.init({
     avatar: {
         allowNull: false,
         type: DataTypes.STRING
-    },
-    isRemembered: { 
-        type: DataTypes.BOOLEAN,
-        default: false,
     }
     }, {
     sequelize,
