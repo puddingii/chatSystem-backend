@@ -1,5 +1,5 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "env": {
         "browser": true,
         "es2021": true,
@@ -13,7 +13,6 @@
         "eslint:recommended",
         "plugin:jsdoc/recommended"
     ],
-    "requireConfigFile": false,
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
@@ -48,10 +47,7 @@
         "keyword-spacing": 0,
         "no-unused-vars": 1,
         "space-before-function-paren": 0,
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
+        "linebreak-style": 0,
         "no-tabs": 0
     }
 }

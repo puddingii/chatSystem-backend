@@ -2,7 +2,6 @@ import express from "express";
 import LoginLog from "../model/LoginLog.js";
 
 const logController = express.Router();
-// select * from Users order by id DESC LIMIT 1;
 
 logController.post("/get", async(req, res) => {
     try {
