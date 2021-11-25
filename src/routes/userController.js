@@ -10,7 +10,7 @@ userController.post("/update", async (req, res) => {
         } = req;
         const isExisted = await User.findOne({ where: { loginId }});
         if(isExisted) {
-            await User.update({ nickname, avatar }, { where: { loginId }})
+            await User.update({ nickname, avatar }, { where: { loginId }});
         } else {
             await User.create({ loginId, nickname, avatar });
         }
